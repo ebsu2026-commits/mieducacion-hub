@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Educación — Centro Educativo Salomé Ureña</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Archivo:ital,wght@0,500;0,600;0,700;1,500&display=swap">
+<style>
+  :root{
+    --slate-1:#16241f; --slate-2:#1e332c;
+    --chalk:#f4f1e6; --chalk-dim:#a9bdb2; --chalk-faint:#6f8478;
+    --line:#8fae9c; --line-soft:#4a6459;
+    --yellow:#f0c94a; --coral:#ef8f66; --sky:#8ecbe0; --mint:#8ee0b0;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(circle at 18% 8%, #ffffff08 0, transparent 45%),
+      radial-gradient(circle at 82% 92%, #ffffff06 0, transparent 40%),
+      linear-gradient(160deg, var(--slate-2), var(--slate-1) 70%);
+    color:var(--chalk); font-family:"Archivo","Segoe UI",sans-serif;
+    -webkit-font-smoothing:antialiased; padding:48px 24px; min-height:100vh;
+  }
+  a{ color:inherit; }
+  .board{ max-width:1000px; margin:0 auto; display:flex; flex-direction:column; gap:40px; }
+
+  .board-head{ text-align:center; display:flex; flex-direction:column; align-items:center; gap:8px; }
+  .eyebrow{ margin:0; text-transform:uppercase; letter-spacing:.16em; font-size:.7rem; font-weight:600; color:var(--chalk-faint); }
+  h1{ margin:2px 0 0; font-family:"Kalam",cursive; font-weight:700; font-size:clamp(2.4rem,6vw,3.4rem); color:var(--chalk); text-wrap:balance; line-height:1.1; }
+  .squiggle{ width:220px; height:14px; margin-top:-2px; }
+  .squiggle path{ fill:none; stroke:var(--yellow); stroke-width:4; stroke-linecap:round; }
+  .subtitle{ margin:6px 0 0; font-size:1.05rem; color:var(--chalk-dim); max-width:56ch; text-wrap:balance; }
+
+  .card-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
+  .resource-card{
+    display:flex; flex-direction:column; gap:10px; text-decoration:none;
+    background:var(--slate-2); border:1.5px solid var(--line-soft); border-radius:22px;
+    padding:24px 26px; position:relative; overflow:hidden; transition:transform .15s, border-color .15s;
+  }
+  .resource-card:hover{ transform:translateY(-4px); border-color:var(--line); }
+  .resource-card .bar{ position:absolute; left:0; top:0; bottom:0; width:6px; }
+  .resource-card .icon{ font-size:1.8rem; line-height:1; }
+  .resource-card h2{ margin:0; font-family:"Kalam",cursive; font-weight:700; font-size:1.4rem; color:var(--chalk); }
+  .resource-card p{ margin:0; font-size:.92rem; color:var(--chalk-dim); line-height:1.5; }
+  .resource-card .go{ margin-top:4px; font-size:.78rem; color:var(--yellow); font-weight:600; }
+  .resource-card .url{ font-size:.72rem; color:var(--chalk-faint); font-family:monospace; }
+
+  .board-foot{ text-align:center; border-top:1.5px dashed var(--line-soft); padding-top:20px; }
+  .board-foot p{ margin:0; font-size:.85rem; color:var(--chalk-dim); }
+</style>
+</head>
+<body>
+
+<div class="board">
+
+  <header class="board-head">
+    <p class="eyebrow">Centro Educativo Salomé Ureña</p>
+    <h1>Mi Educación</h1>
+    <svg class="squiggle" viewBox="0 0 220 14"><path d="M4 8 Q 30 -2, 56 8 T 108 8 T 160 8 T 216 8"/></svg>
+    <p class="subtitle">Recursos interactivos de inglés y francés para el aula: libros de texto con audio, cuadernos de trabajo y estrategias de gramática.</p>
+  </header>
+
+  <div class="card-grid">
+
+    <a class="resource-card" href="https://libros.mieducacion.es">
+      <span class="bar" style="background:var(--sky)"></span>
+      <span class="icon">📖</span>
+      <h2>Libros Interactivos</h2>
+      <p>Los 7 libros del programa Libro Abierto (MINERD), en versión digital: cada página con su imagen real y pronunciación al hacer clic — funciona sin internet.</p>
+      <span class="url">libros.mieducacion.es</span>
+      <span class="go">Explorar los libros →</span>
+    </a>
+
+    <a class="resource-card" href="https://cuadernos.mieducacion.es">
+      <span class="bar" style="background:var(--coral)"></span>
+      <span class="icon">📓</span>
+      <h2>Cuadernos Interactivos</h2>
+      <p>Cuadernos de trabajo por grado y período, con audio de pronunciación, dictados y un alfabeto interactivo — para acompañar las clases de inglés y francés.</p>
+      <span class="url">cuadernos.mieducacion.es</span>
+      <span class="go">Explorar los cuadernos →</span>
+    </a>
+
+    <a class="resource-card" href="https://verbos.mieducacion.es">
+      <span class="bar" style="background:var(--mint)"></span>
+      <span class="icon">🔤</span>
+      <h2>Verbos Interactivo</h2>
+      <p>Mapas de nodos que muestran cómo cambia (o no) la forma del verbo según el sujeto, en los 6 tiempos básicos — con ejemplos más allá de los pronombres.</p>
+      <span class="url">verbos.mieducacion.es</span>
+      <span class="go">Ver los tiempos verbales →</span>
+    </a>
+
+  </div>
+
+  <footer class="board-foot">
+    <p>Más recursos se irán agregando aquí a medida que se vayan creando.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
