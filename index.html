@@ -25,6 +25,18 @@
   a{ color:inherit; }
   .board{ max-width:1000px; margin:0 auto; display:flex; flex-direction:column; gap:40px; }
 
+  .site-nav{
+    display:flex; justify-content:center; gap:6px; flex-wrap:wrap;
+    background:#00000020; border:1.5px solid var(--line-soft); border-radius:999px;
+    padding:6px; width:fit-content; margin:0 auto;
+  }
+  .site-nav a{
+    text-decoration:none; font-size:.8rem; color:var(--chalk-dim); font-weight:600;
+    padding:7px 14px; border-radius:999px; transition:background .15s,color .15s;
+  }
+  .site-nav a:hover{ color:var(--chalk); background:#ffffff0f; }
+  .site-nav a.current{ background:var(--chalk); color:var(--slate-1); }
+
   .board-head{ text-align:center; display:flex; flex-direction:column; align-items:center; gap:8px; }
   .eyebrow{ margin:0; text-transform:uppercase; letter-spacing:.16em; font-size:.7rem; font-weight:600; color:var(--chalk-faint); }
   h1{ margin:2px 0 0; font-family:"Kalam",cursive; font-weight:700; font-size:clamp(2.4rem,6vw,3.4rem); color:var(--chalk); text-wrap:balance; line-height:1.1; }
@@ -59,6 +71,13 @@
 <body>
 
 <div class="board">
+
+  <nav class="site-nav">
+    <a href="https://mieducacion.es" class="current">🏠 Inicio</a>
+    <a href="https://libros.mieducacion.es">📖 Libros</a>
+    <a href="https://cuadernos.mieducacion.es">📓 Cuadernos</a>
+    <a href="https://verbos.mieducacion.es">🔤 Verbos</a>
+  </nav>
 
   <header class="board-head">
     <p class="eyebrow">Centro Educativo Salomé Ureña</p>
